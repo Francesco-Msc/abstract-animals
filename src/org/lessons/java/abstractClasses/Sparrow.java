@@ -1,6 +1,8 @@
 package org.lessons.java.abstractClasses;
 
-public class Sparrow extends Animal{
+import org.lessons.java.interfaces.Fly;
+
+public class Sparrow extends Animal implements Fly{
 
     @Override
     void sound() {
@@ -10,6 +12,11 @@ public class Sparrow extends Animal{
     @Override
     void eat() {
         System.out.println("Il passerotto mangia semi...");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("Il passerotto sta volando");
     }
 
 }

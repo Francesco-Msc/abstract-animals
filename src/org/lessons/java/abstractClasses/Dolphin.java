@@ -1,6 +1,8 @@
 package org.lessons.java.abstractClasses;
 
-public class Dolphin extends Animal{
+import org.lessons.java.interfaces.Swim;
+
+public class Dolphin extends Animal implements Swim{
 
     @Override
     void sound() {
@@ -10,6 +12,11 @@ public class Dolphin extends Animal{
     @Override
     void eat() {
         System.out.println("Il delfino mangia pesci...");
+    }
+
+    @Override
+    public void swim(){
+        System.out.println("Il delfino sta nuotando");
     }
 
 }
